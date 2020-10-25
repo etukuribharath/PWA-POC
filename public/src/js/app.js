@@ -27,6 +27,7 @@ window.addEventListener('beforeinstallprompt', function(event) {
 function displayConfirmNotification() {
   console.log('displayConfirmNotification')
   if ('serviceWorker' in navigator) {
+    console.log('test')
     var options = {
       body: 'You successfully subscribed to our Notification service!',
       icon: '/src/images/icons/app-icon-96x96.png',
@@ -52,6 +53,7 @@ function displayConfirmNotification() {
 
 function askForNotificationPermission() {
   Notification.requestPermission().then(function(result){
+    alert('User Choice', result);
     displayConfirmNotification();
     if (result !== 'granted') {
       console.log('No notification permission granted!');
