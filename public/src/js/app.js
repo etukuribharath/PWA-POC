@@ -53,7 +53,7 @@ function displayConfirmNotification() {
 
 function askForNotificationPermission() {
   Notification.requestPermission().then(function(result){
-    alert('User Choice', result);
+    // alert('User Choice', result);
     displayConfirmNotification();
     if (result !== 'granted') {
       console.log('No notification permission granted!');
