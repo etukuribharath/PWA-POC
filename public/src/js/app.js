@@ -47,8 +47,8 @@ function displayConfirmNotification() {
     // navigator.serviceWorker.ready
     //   .then(function(swreg) {
         swreg.showNotification('Successfully subscribed (from SW)!', options);
-  //     });
-  // }
+      // });
+  }
 }
 
 function askForNotificationPermission() {
